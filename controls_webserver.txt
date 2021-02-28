@@ -9,7 +9,7 @@ UPD 2021-02-27_16:36:29 420     www/gplot/SVG_ESS_GPLOT_LOAD.gplot
 UPD 2021-02-27_16:36:29 948     www/gplot/SVG_ESS_GPLOT_Netz_BO.gplot
 UPD 2021-02-27_16:36:29 475     www/gplot/SVG_ESS_GPLOT_Netz.gplot
 UPD 2021-02-27_16:36:29 814     www/gplot/SVG_ESS_GPLOT_PV_BO.gplot
-UPD 2021-02-27_16:36:29 509     www/gplot/SVG_ESS_GPLOT_PV.gplot
+UPD 2021-02-28_08:54:44 735     www/gplot/SVG_ESS_GPLOT_PV.gplot
 UPD 2021-02-27_16:36:29 397     www/gplot/SVG_ESS_GPLOT_SOC.gplot
 UPD 2021-02-27_16:36:29 1038    www/gplot/SVG_ESS_GPLOT_Speicher_BO.gplot
 UPD 2021-02-28_08:33:47 716     www/gplot/SVG_ESS_GPLOT_Speicher.gplot
