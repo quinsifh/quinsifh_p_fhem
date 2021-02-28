@@ -10,7 +10,7 @@ set y2tics
 set grid y2tics
 set ylabel "W"
 set y2label "%"
-set yrange [0:10000]
+set yrange [0:8000]
 set y2range [0:100]
 
 #ESS_Logfile 11:3\x3a.*::
