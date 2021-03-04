@@ -18,7 +18,7 @@ set y2range [0:]
 #ESS_Logfile 17:3\x3a.*::
 #Zaehler_Tageswerte 13:03\x3a.*::
 
-plot "<IN>" using 1:2 axes x1y2 title 'PV__Produktion' ls l1fill lw 1 with fsteps,\
-     "<IN>" using 1:2 axes x1y2 title 'PV__Direktverbrauch' ls l2fill lw 1 with cubic,\
-     "<IN>" using 1:2 axes x1y2 title 'HH__Verbrauch' ls l0fill lw 1 with lines,\
-     "<IN>" using 1:2 axes x1y1 title 'Energie' ls l0 lw 1 with fsteps
+plot "<IN>" using 1:2 axes x1y2 title 'PV-Produktion' ls l1fill lw 1 with fsteps,\
+     "<IN>" using 1:2 axes x1y2 title 'PV-Direktverbrauch' ls l2fill lw 1 with cubic,\
+     "<IN>" using 1:2 axes x1y2 title 'HH-Verbrauch' ls l0fill lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y1 title 'Energie' ls l5 lw 1 with fsteps

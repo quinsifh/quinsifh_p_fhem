@@ -15,10 +15,10 @@ set y2range [0:100]
 
 #ESS_Logfile 11:3\x3a.*::
 #ESS_Logfile 23:3\x3a.*::
-#ESS_Logfile 3:3\x3a.*::
 #ESS_Logfile 57:3\x3a.*::
+#ESS_Logfile 3:3\x3a.*::
 
-plot "<IN>" using 1:2 axes x1y1 title 'ESS__Einspeicherung' ls l8fill lw 1 with fsteps,\
-     "<IN>" using 1:2 axes x1y1 title 'ESS__Ausspeicherung' ls l1fill lw 1 with fsteps,\
-     "<IN>" using 1:2 axes x1y2 title 'ESS__Ladezustand' ls l2dot lw 3 with lines,\
-     "<IN>" using 1:2 axes x1y1 title 'ESS__Nachladung' ls l0fill lw 1 with lines
+plot "<IN>" using 1:2 axes x1y1 title 'ESS-Einspeicherung' ls l8fill lw 1 with fsteps,\
+     "<IN>" using 1:2 axes x1y1 title 'ESS-Ausspeicherung' ls l1fill lw 1 with fsteps,\     
+     "<IN>" using 1:2 axes x1y1 title 'ESS-Nachladung' ls l0fill lw 1 with lines,\
+	 "<IN>" using 1:2 axes x1y2 title 'ESS-Ladezustand' ls l2dot lw 3 with lines
