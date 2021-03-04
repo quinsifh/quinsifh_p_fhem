@@ -1,4 +1,4 @@
-# Created by FHEM/98_SVG.pm, 2021-02-28 08:47:59
+# Created by FHEM/98_SVG.pm, 2021-03-04 21:13:25
 set terminal png transparent size <SIZE> crop
 set output '<OUT>.png'
 set xdata time
@@ -7,11 +7,11 @@ set xlabel " "
 set title '<L1>'
 set ytics 
 set y2tics 
-set grid
+set grid y2tics
 set ylabel "kWh"
 set y2label "W"
 set yrange [0:]
-set y2range [0:]
+set y2range [0:9000]
 
 #ESS_Logfile 15:3\x3a.*::
 #ESS_Logfile 9:3\x3a.*::
@@ -20,5 +20,5 @@ set y2range [0:]
 
 plot "<IN>" using 1:2 axes x1y2 title 'PV-Produktion' ls l1fill lw 1 with fsteps,\
      "<IN>" using 1:2 axes x1y2 title 'PV-Direktverbrauch' ls l2fill lw 1 with cubic,\
-     "<IN>" using 1:2 axes x1y2 title 'HH-Verbrauch' ls l0fill lw 1 with lines,\
-     "<IN>" using 1:2 axes x1y1 title 'Energie' ls l5 lw 1 with fsteps
+     "<IN>" using 1:2 axes x1y2 title 'HH-Verbrauch' ls l0fill lw 1 with fsteps,\
+     "<IN>" using 1:2 axes x1y1 title 'PV-Energie' ls l5dot lw 2 with fsteps

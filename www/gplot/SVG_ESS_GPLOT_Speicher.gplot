@@ -1,4 +1,4 @@
-# Created by FHEM/98_SVG.pm, 2021-02-21 00:17:31
+# Created by FHEM/98_SVG.pm, 2021-03-04 21:01:18
 set terminal png transparent size <SIZE> crop
 set output '<OUT>.png'
 set xdata time
@@ -8,17 +8,17 @@ set title '<L1>'
 set ytics 
 set y2tics 
 set grid y2tics
-set ylabel "W"
-set y2label "%"
-set yrange [0:8000]
-set y2range [0:100]
+set ylabel "%"
+set y2label "W"
+set yrange [0:100]
+set y2range [0:9000]
 
 #ESS_Logfile 11:3\x3a.*::
 #ESS_Logfile 23:3\x3a.*::
 #ESS_Logfile 57:3\x3a.*::
 #ESS_Logfile 3:3\x3a.*::
 
-plot "<IN>" using 1:2 axes x1y1 title 'ESS-Einspeicherung' ls l8fill lw 1 with fsteps,\
-     "<IN>" using 1:2 axes x1y1 title 'ESS-Ausspeicherung' ls l1fill lw 1 with fsteps,\     
-     "<IN>" using 1:2 axes x1y1 title 'ESS-Nachladung' ls l0fill lw 1 with lines,\
-	 "<IN>" using 1:2 axes x1y2 title 'ESS-Ladezustand' ls l2dot lw 3 with lines
+plot "<IN>" using 1:2 axes x1y2 title 'ESS-Einspeicherung' ls l8fill lw 1 with fsteps,\
+     "<IN>" using 1:2 axes x1y2 title 'ESS-Ausspeicherung' ls l1fill lw 1 with fsteps,\
+     "<IN>" using 1:2 axes x1y2 title 'ESS-Nachladung' ls l0fill lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y1 title 'ESS-Ladezustand' ls l2dot lw 3 with lines
