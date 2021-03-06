@@ -1,4 +1,4 @@
-# Created by FHEM/98_SVG.pm, 2021-03-04 21:13:25
+# Created by FHEM/98_SVG.pm, 2021-03-06 12:04:15
 set terminal png transparent size <SIZE> crop
 set output '<OUT>.png'
 set xdata time
@@ -18,7 +18,7 @@ set y2range [0:9000]
 #ESS_Logfile 17:3\x3a.*::
 #Zaehler_Tageswerte 13:03\x3a.*::
 
-plot "<IN>" using 1:2 axes x1y2 title 'PV-Produktion' ls l1fill lw 1 with fsteps,\
+plot "<IN>" using 1:2 axes x1y2 title 'PV-Produktion' ls l1fill lw 2 with fsteps,\
      "<IN>" using 1:2 axes x1y2 title 'PV-Direktverbrauch' ls l2fill lw 1 with cubic,\
      "<IN>" using 1:2 axes x1y2 title 'HH-Verbrauch' ls l0fill lw 1 with fsteps,\
      "<IN>" using 1:2 axes x1y1 title 'PV-Energie' ls l5dot lw 2 with fsteps
