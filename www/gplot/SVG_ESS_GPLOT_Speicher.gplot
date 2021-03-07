@@ -20,5 +20,5 @@ set y2range [0:9000]
 
 plot "<IN>" using 1:2 axes x1y2 title 'ESS-Einspeicherung' ls l8fill lw 1 with fsteps,\
      "<IN>" using 1:2 axes x1y2 title 'ESS-Ausspeicherung' ls l1fill lw 1 with fsteps,\
-     "<IN>" using 1:2 axes x1y2 title 'ESS-Nachladung' ls l0fill lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'ESS-Nachladung' ls l0fill lw 1 with fsteps,\
      "<IN>" using 1:2 axes x1y1 title 'ESS-Ladezustand' ls l2dot lw 3 with lines
