@@ -89,4 +89,9 @@ Ein Neustart des Raspberry-Pi kann über den Befehl ```restart fhem``` im Menüb
 |![BusinessOptimum](Bilder/BusinessOptimum_7.JPG) |"lastloglines_BO" steht für die letzen Zeilen im Logfile der Business Optimum Logigk. Dies ist extrem wichtig um die korrekte Funktionsweise zu prüfen. Speziell wenn eine neue Konfiguration erstellt und gesendet wurde kann man hier sehen ob diese auch übernommen wurde.<br> Tipp: will man eine größere Anzahl von Zeilen angezeigt bekommen kann man die letzte Zahl im der Browseradresse entsprechend vergrößern.<br> `http://<ip.raspberr>:8083/fhem?cmd=lastloglines_BO+300`
 
 
- 
+## Kann ich auch von unterwegs auf FHEM zugreifen?
+Das geht wenn man sich eine VPN Verbindugn einrichtet. Mit so einem "Virtual Private Network" baut man eine sichere Verbindung zu seinem Heimnetzwerk auf.   
+Die gängignen Router können das (FritzBox, Speedport, etc) hier mal zwei Anleitung für die Fritzbox - abhängig von welchem Endgerät man zugreifen möchte.
+
+https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-android-einrichten/ <br>
+https://avm.de/service/vpn/tipps-tricks/vpn-verbindung-zur-fritzbox-unter-apple-ios-zb-iphone-einrichten/ <br>
