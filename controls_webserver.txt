@@ -1,5 +1,5 @@
 UPD 2021-02-27_16:36:29 1907    FHEM/00_BusinessOptimum_Parameter.cfg
-UPD 2021-03-21_09:04:33 55589   FHEM/00_Caterva_ESS.cfg
+UPD 2021-03-21_09:20:37 55655   FHEM/00_Caterva_ESS.cfg
 UPD 2021-02-27_16:36:29 462     FHEM/00_Private.cfg
 UPD 2021-02-27_16:36:29 4914    FHEM/00_SYSMON.cfg
 UPD 2021-02-27_16:36:29 53440   FHEM/99_myUtils.pm
@@ -14,7 +14,7 @@ UPD 2021-02-27_16:36:29 397     www/gplot/SVG_ESS_GPLOT_SOC.gplot
 UPD 2021-02-27_16:36:29 1038    www/gplot/SVG_ESS_GPLOT_Speicher_BO.gplot
 UPD 2021-03-07_12:59:52 753     www/gplot/SVG_ESS_GPLOT_Speicher.gplot
 UPD 2021-03-06_19:27:03 526     www/gplot/SVG_ESS_GPLOT_Verbrauch.gplot
-UPD 2021-03-20_19:01:11 519     www/gplot/SVG_ESS_GPLOT_WG.gplot
+UPD 2021-03-21_09:20:37 464     www/gplot/SVG_ESS_GPLOT_WG.gplot
 UPD 2021-02-27_16:36:29 547     www/gplot/SVG_ESS_GPLOT_Z10.gplot
 UPD 2021-02-27_16:36:29 547     www/gplot/SVG_ESS_GPLOT_Z11.gplot
 UPD 2021-02-27_16:36:29 515     www/gplot/SVG_ESS_GPLOT_Z12.gplot
