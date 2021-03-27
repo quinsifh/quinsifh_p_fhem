@@ -454,7 +454,6 @@ foreach (@readings)
  	fhem("setreading $SELF $readingname $_");
  $x++;
  }
- set Power_efficiency_month_in_Prozent2 = 77;
 }
 
 
