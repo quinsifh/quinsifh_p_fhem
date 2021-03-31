@@ -18,9 +18,9 @@ myUtils_Initialize($$)
 # Enter you functions below _this_ line.
 
 
-sub 
+sub
 readfromcaterva_BusinessOptimum_config()
-{ 
+{
 
 #my $config_skalar  = `tail -1 /opt/fhem/log/BusinessOptimum.config_caterva`;
 my $config_skalar = `ssh admin\@caterva "tail -1 /home/admin/bin/BusinessOptimum.config"`;
@@ -63,7 +63,7 @@ elsif ($config_array[16] == 0) {
 	#Log 1, "habe 0 BusinessOptimum Standalone erkannt";
 	#	fhem("set BusinessOptimum_BOS BusinessOptimumStarter")
 }
-	
+
 #Log 1, "Lokal nach Update:                  ".ReadingsVal("write_settings","Data","999");
 }
 
@@ -77,8 +77,8 @@ elsif ($config_array[16] == 0) {
 # Aufruf: z.B.  {return_WarAlm_Failures(ReadingsVal("SwDER_LLN0","WarAlm","0"))}
 # Zur Anzeige in Tablet UI - sub11.html
 
-sub 
-return_WarAlm_Failures(@) 
+sub
+return_WarAlm_Failures(@)
 {
 my $name = "WarAlm";
 my $failureflags_r = shift;
@@ -126,15 +126,15 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] > 0){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
-					
+
 					$count ++;
 					}
 }
 
-sub 
-return_BusAlm_Failures(@) 
+sub
+return_BusAlm_Failures(@)
 {
 my $name = "BusAlm";
 my $failureflags_r = shift;
@@ -182,14 +182,14 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] > 0){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
 					$count ++;
 					}
 }
 
-sub 
-return_CcAlm_Failures(@) 
+sub
+return_CcAlm_Failures(@)
 {
 my $name = "CcAlm";
 my $failureflags_r = shift;
@@ -238,14 +238,14 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] > 0){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
 					$count ++;
 					}
 }
 
-sub 
-return_InoAlm_Failures(@) 
+sub
+return_InoAlm_Failures(@)
 {
 my $name = "InoAlm";
 my $failureflags_r = shift;
@@ -294,14 +294,14 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] > 0){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
 					$count ++;
 					}
 }
 
-sub 
-return_MacAlm_Failures(@) 
+sub
+return_MacAlm_Failures(@)
 {
 my $name = "MacAlm";
 my $failureflags_r = shift;
@@ -351,14 +351,14 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] == 1 ){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
 					$count ++;
 					}
 }
 
-sub 
-return_SafAlm_Failures(@) 
+sub
+return_SafAlm_Failures(@)
 {
 my $name = "SafAlm";
 my $failureflags_r = shift;
@@ -406,7 +406,7 @@ my $count = 0;
 foreach(@failureflags){
 					if ($failureflags[$count] > 0){
 							fhem("setreading dummy_Fehlerspeicher $name$count $failuretext[$count]");
-							} 
+							}
 					else {fhem("deletereading dummy_Fehlerspeicher $name$count")}
 					$count ++;
 					}
@@ -435,7 +435,7 @@ return_SafAlm_Failures(ReadingsVal("SwDER_LLN0","SafAlm","0"));
 
 #########################################################################
 
-sub 
+sub
 createReadings_ESS_Minutenwerte($)
 {
 my $SELF = shift;
@@ -457,7 +457,7 @@ foreach (@readings)
 }
 
 
-sub 
+sub
 createReadings_TD_ESS_Minutenwerte()
 {
 my $30_ESS_counter_level_discharge_in_Wh_TD  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $30_ESS_counter_level_discharge_in_Wh_TD =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $30_ESS_counter_level_discharge_in_Wh_TD;;
@@ -550,7 +550,7 @@ fhem("setreading SwDER_ZBTC1 1_content @response");
 }
 
 
-sub 
+sub
 CMD_MOD()
 {
 my @response = `(echo "mod";echo "exit";) | netcat 192.168.0.222 1338`;
@@ -564,7 +564,7 @@ fhem("setreading MOD 1_content @response");
 # {CMD("SwDER","CPOL1")}
 #
 
-sub 
+sub
 CMD($$)
 {
 my($CMD1,$CMD2) = @_;
@@ -583,7 +583,7 @@ my $SELF = shift;
 #############################################################
 #
 # SwDER/ZINV1.DcV.mag.f zeigt Gesamtspannung der Akkus geht aber nicht bei SAFT-Akkus
-sub 
+sub
 CMD_ZINV1()
 {
 my @response = `(echo "SwDER/ZINV1";echo "exit";) | netcat 192.168.0.222 1337`;
@@ -601,7 +601,7 @@ foreach ( @response ) {
 #
 # interessant für SAFT Akkus
 
-sub 
+sub
 CMD_MBMS1()
 {
 my @response = `(echo "SwDER/MBMS1";echo "exit";) | netcat 192.168.0.222 1337`;
@@ -619,7 +619,7 @@ foreach ( @response ) {
 # Geht nicht
 #############################################################
 
-#sub 
+#sub
 #CMD_SOC()
 #{
 #my $response = `(echo "swarmBcCheckSoC <<< j";echo "exit";) | netcat 192.168.0.222 1337`;
@@ -627,7 +627,7 @@ foreach ( @response ) {
 #return($response);
 #}
 
-#sub 
+#sub
 #CMD_BC_Status()
 #{
 #my $response = `(echo "swarmBcStatus <<< j";echo "exit";) | netcat 192.168.0.222 1337`;
@@ -638,7 +638,7 @@ foreach ( @response ) {
 #############################################################
 
 
-sub 
+sub
 LogZaehlerDay()
 {
 
@@ -674,7 +674,7 @@ my $statGrid2HH_2Day = round(ReadingsVal("ESS_Minutenwerte","statGrid2HH_2Day","
 addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhDay 05: $stat31_HH_counter_level_discharge_in_WhDay 07: $stat32_HH_counter_level_charge_in_WhDay 09: $stat33_PV_counter_level_discharge_in_WhDay 11: $stat34_ESS_counter_level_charge_in_WhDay 13: $stat35_PV_counter_level_charge_in_WhDay 15: $stat36_PVplusHH_counter_level_discharge_in_WhDay 17: $stat37_PVplusHH_counter_level_charge_in_WhDay 19: $stat38_PBH_counter_level_in_WhDay 21: $stat39_PPB_counter_level_in_WhDay 23: $stat40_PRE_counter_level_in_WhDay 25: $stat41_PDI_counter_level_in_WhDay 27: $stat42_PFCRpos_counter_level_in_WhDay 29: $stat43_PFCRneg_counter_level_in_WhDay 31: $stat45_PFRRpos_counter_level_in_WhDay 33: $stat46_PFRRneg_counter_level_in_WhDay 35: $statPV2GridDay 37: $statPV2HHDay 39: $statGrid2HHDay 41: $statGrid2HH_2Day");
 }
 
-sub 
+sub
 LogZaehlerMonth()
 {
 
@@ -710,7 +710,7 @@ my $statGrid2HHMonth = round(ReadingsVal("ESS_Minutenwerte","statGrid2HHMonth","
 addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhMonth 05: $stat31_HH_counter_level_discharge_in_WhMonth 07: $stat32_HH_counter_level_charge_in_WhMonth 09: $stat33_PV_counter_level_discharge_in_WhMonth 11: $stat34_ESS_counter_level_charge_in_WhMonth 13: $stat35_PV_counter_level_charge_in_WhMonth 15: $stat36_PVplusHH_counter_level_discharge_in_WhMonth 17: $stat37_PVplusHH_counter_level_charge_in_WhMonth 19: $stat38_PBH_counter_level_in_WhMonth 21: $stat39_PPB_counter_level_in_WhMonth 23: $stat40_PRE_counter_level_in_WhMonth 25: $stat41_PDI_counter_level_in_WhMonth 27: $stat42_PFCRpos_counter_level_in_WhMonth 29: $stat43_PFCRneg_counter_level_in_WhMonth 31: $stat45_PFRRpos_counter_level_in_WhMonth 33: $stat46_PFRRneg_counter_level_in_WhMonth  35: $statPV2GridMonth 37: $statPV2HHMonth 39: $statGrid2HHMonth");
 }
 
-sub 
+sub
 LogZaehlerLastDay()
 {
 
@@ -765,7 +765,7 @@ if(ReadingsVal("P_in_W_chargeStandbyThreshold","check1","999") eq "nok"){fhem("s
 
 if(ReadingsVal("P_in_W_chargeStandbyThreshold_hyst","check1","999") eq "nok"){fhem("set Configuration_Check nok")};
 if(ReadingsVal("P_in_W_chargeStandbyThreshold_hyst","check2","999") eq "nok"){fhem("set Configuration_Check nok")};
- 	
+
 
 if(ReadingsVal("SoC_max","check1","999") eq "nok"){fhem("set Configuration_Check nok")};
 if(ReadingsVal("SoC_max","check2","999") eq "nok"){fhem("set Configuration_Check nok")};
@@ -787,7 +787,7 @@ if(ReadingsVal("ECS3_configuration","check1","999") eq "nok"){fhem("set Configur
 }
 
 
-sub 
+sub
 create_BusinessOptimum_config()
 {
 my $string = "#P_in_W_chargeStandbyThreshold:				Charging only, when \"P_in_W_chargeStandbyThreshold\" \'exceeded\'
@@ -854,7 +854,7 @@ overwriteLog($filename, "$string $timestamp4
 $P_in_W_chargeStandbyThreshold;$P_in_W_chargeStandbyThreshold_hyst;$P_in_W_dischargeStandbyThreshold;$P_in_W_dischargeStandbyThreshold_delay;$P_in_W_dischargeStandbyThreshold_hyst;$SoC_max;$SoC_charge;$SoC_discharge;$SoC_min;$SoC_err;$counter_discharge_to_standby_max;$counter_standby_to_discharge_max;$counter_increment;$loop_delay;$system_initialization;$ECS3_configuration;$BusinessOptimum_BOS;");
 
 
-fhem("setreading write_settings Data @dataArray"); 	
+fhem("setreading write_settings Data @dataArray");
 
 
 #Log(1,"BussinessOptimum @dataArray");
@@ -865,7 +865,7 @@ fhem("setreading write_settings Data @dataArray");
 
 
 # Config senden an Caterva
-sub 
+sub
 copy2caterva_BusinessOptimum_config()
 {
 system("scp /opt/fhem/log/BusinessOptimum.config admin\@caterva:bin");
@@ -873,12 +873,12 @@ system("scp /opt/fhem/log/BusinessOptimum.config admin\@caterva:bin");
 
 
 
-sub 
+sub
 delete_noPVBuffering_Flag()
 {`ssh admin\@caterva "rm -f /home/admin/registry/noPVBuffering"`;
 }
 
-sub 
+sub
 create_noPVBuffering_Flag()
 {
 system("ssh admin\@caterva touch /home/admin/registry/noPVBuffering");
@@ -886,7 +886,7 @@ system("ssh admin\@caterva touch /home/admin/registry/noPVBuffering");
 
 #Stop BusinessOptimum
 #touch /tmp/BusinessOptimumStop
-sub 
+sub
 create_BusinessOptimumStop_Flag()
 {
 system("ssh admin\@caterva touch /tmp/BusinessOptimumStop");
@@ -896,7 +896,7 @@ Log 1, "BusinessOptimum_Stop_Flag gesetzt";
 #Stop BusinessOptimumStarter
 #touch /tmp/BusinessOptimumStarterStop
 #touch /tmp/BusinessOptimumStop
-sub 
+sub
 create_BusinessOptimumStarterStop_Flag()
 {
 system("ssh admin\@caterva touch /tmp/BusinessOptimumStarterStop");
@@ -909,7 +909,7 @@ Log 1, "BusinessOptimumStarterStop_Flag gesetzt";
 
 #Start of Module-Balancing:
 #touch /var/log/ModuleBalancing
-sub 
+sub
 start_ModuleBalancing_Flag()
 {
 system("ssh admin\@caterva touch /var/log/ModuleBalancing");
@@ -919,7 +919,7 @@ Log 1, "ModuleBalancing_Flag gesetzt";
 
 #Start of Cell-Balancing:
 #touch /tmp/CellBalancing
-sub 
+sub
 start_CellBalancing_Flag()
 {
 system("ssh admin\@caterva touch /tmp/CellBalancing");
@@ -941,7 +941,7 @@ sub
 check_noPVBuffering_Flag()
 {
 my $response = `(echo -f /home/admin/registry/noPVBuffering;)`;
-if ($response) {Log 1,"File noPVBuffering existiert"} else {Log 1,"File noPVBuffering existiert nicht"}; 
+if ($response) {Log 1,"File noPVBuffering existiert"} else {Log 1,"File noPVBuffering existiert nicht"};
 }
 
 
@@ -956,26 +956,26 @@ Log 1, "ModuleBalancing_Flag gesetzt";
 
 
 
-#rsh admin@caterva "/home/admin/bin/BusinessOptimumKill.sh" 
-#sub 
+#rsh admin@caterva "/home/admin/bin/BusinessOptimumKill.sh"
+#sub
 #BusinessOptimumKill()
 #{
 #system("rsh admin\@caterva /home/admin/bin/BusinessOptimumKill.sh");
 #}
 
-#sub 
+#sub
 #BusinessOptimumStart()
 #{
 #system("rsh admin\@caterva nohup /home/admin/bin/BusinessOptimum.sh &");
 #}
 
-#sub 
+#sub
 #BusinessOptimumStarter_Start()
 #{
 #system("(rsh admin\@caterva nohup /home/admin/bin/BusinessOptimumStarter.sh start & )&");
 #}
 
-#sub 
+#sub
 #BusinessOptimumStarter_Stop()
 #{
 #system("rsh admin\@caterva /home/admin/bin/BusinessOptimumStarter.sh stop");
@@ -987,7 +987,7 @@ Log 1, "ModuleBalancing_Flag gesetzt";
 # Dieser Wert wird bei Tablet-UI zur Anzeigeoptimierung verwendet.
 # Bei Initialisierung soll dieser Wert eingelesen werden.
 
-sub 
+sub
 read_PV_Peak()
 {
 my $PVPeak = trim(`rsh admin\@caterva cat /home/admin/registry/out/pvPeak`);
@@ -995,7 +995,7 @@ fhem("setreading ESS_Minutenwerte 09_PVpeak_in_W_2 $PVPeak");
 #Log 1,"read_PV_Peak: $PVPeak W";
 }
 
-sub 
+sub
 read_bmm_Type()
 {
 my $bmmType = `rsh admin\@caterva cat /home/admin/registry/out/bmmType 1>/dev/null 2>&1 ; echo $?`;
@@ -1007,7 +1007,7 @@ Log 1,"read_bmm_Type: $bmmType";
 
 #grep -i quinger /home/admin/bin/BusinessOptimum.sh
 #substr(TimeNow(),0,7);
-sub 
+sub
 read_BO_Version()
 {
 my $Version = substr(`rsh admin\@caterva grep -i quinger /home/admin/bin/BusinessOptimum.sh`,21,23);
@@ -1023,7 +1023,7 @@ Log 1,"Business Optimum nicht installiert";
 
 
 
-#sub 
+#sub
 #read_ESS_GEN()
 #{
 #my $gen = `(rsh admin\@caterva "ls /home/admin/registry/out/gen1" 1>/dev/null 2>&1 ; echo \$?)`;
@@ -1034,7 +1034,7 @@ Log 1,"Business Optimum nicht installiert";
 
 #{check_File_exists('/home/admin/registry/out/gen1')}
 #{check_File_exists('/home/admin/bin/BusinessOptimum.sh')}
-sub 
+sub
 check_File_exists($)
 {
 my $filename = shift;
@@ -1050,7 +1050,7 @@ if ($response == "0"){
 }
 
 #gleiches lokal
-sub 
+sub
 check_File_exists_PI($)
 {
 my $filename = shift;
@@ -1085,11 +1085,13 @@ overwriteLog($$)
 	close(MYFILE);
 }
 
-sub prg_Tage_MTD(){
+sub
+prg_Tage_MTD()
+{
  	my ($sec,$min,$hour,$mday,$month,$year,$wday,$yday,$isdst) = localtime;
 	return($mday);
-	}
-	
+}
+
 
 sub prg_Tage_YTD(){
  	my ($sec,$min,$hour,$mday,$month,$year,$wday,$yday,$isdst) = localtime;
