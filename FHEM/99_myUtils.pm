@@ -454,6 +454,8 @@ foreach (@readings)
  	fhem("setreading $SELF $readingname $_");
  $x++;
  }
+ my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $val;;
+ fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD $val");
 }
 
 
