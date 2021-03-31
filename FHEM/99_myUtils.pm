@@ -457,17 +457,12 @@ foreach (@readings)
 }
 
 
-sub
-createReadings_TD_ESS_Minutenwerte()
-{
-my $_30_ESS_counter_level_discharge_in_Wh_TD  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $_30_ESS_counter_level_discharge_in_Wh_TD =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $_30_ESS_counter_level_discharge_in_Wh_TD;;
-}
-
 
 sub
 createReadings_TD_ESS_Minutenwerte()
 {
-my $30_ESS_counter_level_discharge_in_Wh_TD  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $30_ESS_counter_level_discharge_in_Wh_TD =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $30_ESS_counter_level_discharge_in_Wh_TD;;
+my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $val;;
+fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD $val");
 }
 
 
