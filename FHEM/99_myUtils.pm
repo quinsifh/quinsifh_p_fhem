@@ -1082,6 +1082,7 @@ addToLog($$)
 	close(MYFILE);
 }
 
+
 sub
 overwriteLog($$)
 {
@@ -1092,12 +1093,11 @@ overwriteLog($$)
 	close(MYFILE);
 }
 
-sub
-prg_Tage_MTD()
-{
+
+sub prg_Tage_MTD(){
  	my ($sec,$min,$hour,$mday,$month,$year,$wday,$yday,$isdst) = localtime;
 	return($mday);
-}
+	}
 
 
 sub prg_Tage_YTD(){
