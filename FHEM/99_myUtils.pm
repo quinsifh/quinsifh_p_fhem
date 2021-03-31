@@ -823,6 +823,7 @@ my $string = "#P_in_W_chargeStandbyThreshold:				Charging only, when \"P_in_W_ch
 #April-September: -4000;-1500;1500;750;500;90;80;23;18;0;120;60;4;0;1112;PVHH;0;
 #Config created by FHEM";
 
+#update_Fehlerspeicher();
 
 my $timestamp2 = substr(TimeNow(),0,10); #"2020-04-11" 01:00:15  für Logfile Teil1
 my $timestamp3 = substr(TimeNow(),11,8); #2020-04-11 "01:00:15"  für Logfile Teil2
@@ -1086,17 +1087,24 @@ overwriteLog($$)
 	close(MYFILE);
 }
 
-sub prg_Tage_MTD()
-{
+sub prg_Tage_MTD(){
  	my ($sec,$min,$hour,$mday,$month,$year,$wday,$yday,$isdst) = localtime;
 	return($mday);
-}
+	}
+	
 
 sub prg_Tage_YTD(){
  	my ($sec,$min,$hour,$mday,$month,$year,$wday,$yday,$isdst) = localtime;
 	return($yday);
 	}
 
+
+sub myProxyForVentil($){
+my $DEVICE= shift;
+ if ($DEVICE =~ m/Ventil_1/) {return "Bewaesserung_Vorgarten_1"}
+ if ($DEVICE =~ m/Ventil_2/) {return "Bewaesserung_Vorgarten_aussen"}
+ if ($DEVICE =~ m/Ventil_3/) {return "Bewaesserung_Vorgarten_Tropfschlauch"}
+}
 
 #########################################################################
 # do not change below _this_ line.
