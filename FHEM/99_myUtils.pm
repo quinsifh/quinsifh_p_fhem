@@ -454,12 +454,12 @@ foreach (@readings)
  	fhem("setreading $SELF $readingname $_");
  $x++;
  }
- my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
- fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD $val");
+ my $val  = ReadingsVal("ESS_Minutenwerte", "ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte ESS_counter_level_discharge_in_Wh_TD $val");
  my $val  = ReadingsVal("ESS_Minutenwerte", "31_HH_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
  fhem("setreading ESS_Minutenwerte 31_HH_counter_level_discharge_in_Wh_TD $val");
- my $val  = ReadingsVal("ESS_Minutenwerte", "34_ESS_counter_level_charge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
- fhem("setreading ESS_Minutenwerte 34_ESS_counter_level_charge_in_Wh_TD $val");
+ my $val  = ReadingsVal("ESS_Minutenwerte", "ESS_counter_level_charge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte ESS_counter_level_charge_in_Wh_TD $val");
  my $val  = ReadingsVal("ESS_Minutenwerte", "35_PV_counter_level_charge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
  fhem("setreading ESS_Minutenwerte 35_PV_counter_level_charge_in_Wh_TD $val");
  my $val  = ReadingsVal("ESS_Minutenwerte", "36_PVplusHH_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
