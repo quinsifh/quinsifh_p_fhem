@@ -455,7 +455,9 @@ foreach (@readings)
  $x++;
  }
  # my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;; return $val;;
- fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD sigi");
+ #fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD sigi");
+ my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD $val");
 }
 
 
@@ -464,9 +466,6 @@ sub
 createReadings_TD_ESS_Minutenwerte()
 {
 my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);;1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;;
-#my $val  = ReadingsVal("ESS_Minutenwerte", "30_ESS_counter_level_discharge_in_Wh",0);
-#1 while $val =~ s/^(-?\d+)(\d{3})/$1.$2/;
-#my $val  = 1234;
 fhem("setreading ESS_Minutenwerte 30_ESS_counter_level_discharge_in_Wh_TD $val");
 }
 
