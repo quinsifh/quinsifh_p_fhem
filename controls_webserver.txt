@@ -46,5 +46,5 @@ UPD 2021-02-27_16:36:29 1630    www/tablet/index.html
 UPD 2021-02-27_16:36:29 1190    www/tablet/menu.html
 UPD 2021-02-27_16:36:29 12712   www/tablet/sub10.html
 UPD 2021-02-27_16:36:29 13771   www/tablet/sub11.html
-UPD 2021-04-04_09:55:35 4208    www/tablet/sub12.html
+UPD 2021-04-04_10:03:32 4208    www/tablet/sub12.html
 UPD 2021-02-27_16:36:29 6291    www/tablet/sub1.html
