@@ -1,8 +1,8 @@
 UPD 2021-02-27_16:36:29 1907    FHEM/00_BusinessOptimum_Parameter.cfg
-UPD 2021-04-02_21:30:23 56700   FHEM/00_Caterva_ESS.cfg
+UPD 2021-04-04_19:20:28 56898   FHEM/00_Caterva_ESS.cfg
 UPD 2021-02-27_16:36:29 462     FHEM/00_Private.cfg
 UPD 2021-02-27_16:36:29 4914    FHEM/00_SYSMON.cfg
-UPD 2021-04-04_10:10:24 54578   FHEM/99_myUtils.pm
+UPD 2021-04-04_19:20:28 54646   FHEM/99_myUtils.pm
 UPD 2021-03-20_13:30:35 5164    fhem.cfg
 UPD 2021-02-27_16:36:29 516     www/gplot/SVG_ESS_GPLOT_History.gplot
 UPD 2021-03-06_11:56:59 420     www/gplot/SVG_ESS_GPLOT_LOAD.gplot
@@ -46,5 +46,5 @@ UPD 2021-02-27_16:36:29 1630    www/tablet/index.html
 UPD 2021-02-27_16:36:29 1190    www/tablet/menu.html
 UPD 2021-02-27_16:36:29 12712   www/tablet/sub10.html
 UPD 2021-02-27_16:36:29 13771   www/tablet/sub11.html
-UPD 2021-04-04_10:26:09 4208    www/tablet/sub12.html
+UPD 2021-04-04_19:20:28 4604    www/tablet/sub12.html
 UPD 2021-02-27_16:36:29 6291    www/tablet/sub1.html
