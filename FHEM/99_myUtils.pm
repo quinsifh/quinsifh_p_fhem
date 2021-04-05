@@ -860,8 +860,6 @@ $P_in_W_chargeStandbyThreshold;$P_in_W_chargeStandbyThreshold_hyst;$P_in_W_disch
 
 
 fhem("setreading write_settings Data @dataArray");
-
-
 #Log(1,"BussinessOptimum @dataArray");
 }
 
@@ -907,8 +905,6 @@ create_BusinessOptimumStarterStop_Flag()
 system("ssh admin\@caterva touch /tmp/BusinessOptimumStarterStop");
 system("ssh admin\@caterva touch /tmp/BusinessOptimumStop");
 Log 1, "BusinessOptimumStarterStop_Flag gesetzt";
-
-
 }
 
 
