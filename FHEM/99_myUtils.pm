@@ -681,13 +681,14 @@ my $stat42_PFCRpos_counter_level_in_WhDay = round(ReadingsVal("ESS_Minutenwerte"
 my $stat43_PFCRneg_counter_level_in_WhDay = round(ReadingsVal("ESS_Minutenwerte","stat43_PFCRneg_counter_level_in_WhDay","999")/1000,1);
 my $stat45_PFRRpos_counter_level_in_WhDay = round(ReadingsVal("ESS_Minutenwerte","stat45_PFRRpos_counter_level_in_WhDay","999")/1000,1);
 my $stat46_PFRRneg_counter_level_in_WhDay = round(ReadingsVal("ESS_Minutenwerte","stat46_PFRRneg_counter_level_in_WhDay","999")/1000,1);
-my $statPVtoHHDay = round(ReadingsVal("ESS_Minutenwerte","statPVtoHHDay","999")/1000,1);
 my $statPV2GridDay = round(ReadingsVal("ESS_Minutenwerte","statPV2GridDay","999")/1000,1);
 my $statPV2HHDay = round(ReadingsVal("ESS_Minutenwerte","statPV2HHDay","999")/1000,1);
 my $statGrid2HHDay = round(ReadingsVal("ESS_Minutenwerte","statGrid2HHDay","999")/1000,1);
 my $statGrid2HH_2Day = round(ReadingsVal("ESS_Minutenwerte","statGrid2HH_2Day","999")/1000,1);
 my $statHHcompleteDay = round(ReadingsVal("ESS_Minutenwerte","statHHcompleteDay","999")/1000,1);
-addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhDay 05: $stat31_HH_counter_level_discharge_in_WhDay 07: $stat32_HH_counter_level_charge_in_WhDay 09: $stat33_PV_counter_level_discharge_in_WhDay 11: $stat34_ESS_counter_level_charge_in_WhDay 13: $stat35_PV_counter_level_charge_in_WhDay 15: $stat36_PVplusHH_counter_level_discharge_in_WhDay 17: $stat37_PVplusHH_counter_level_charge_in_WhDay 19: $stat38_PBH_counter_level_in_WhDay 21: $stat39_PPB_counter_level_in_WhDay 23: $stat40_PRE_counter_level_in_WhDay 25: $stat41_PDI_counter_level_in_WhDay 27: $stat42_PFCRpos_counter_level_in_WhDay 29: $stat43_PFCRneg_counter_level_in_WhDay 31: $stat45_PFRRpos_counter_level_in_WhDay 33: $stat46_PFRRneg_counter_level_in_WhDay 35: $statPV2GridDay 37: $statPV2HHDay 39: $statGrid2HHDay 41: $statGrid2HH_2Day 43: $statHHcompleteDay");
+my $stat50_Caterva_ESS_energy_loss_charging_in_WhDay = round(ReadingsVal("ESS_Minutenwerte","stat50_Caterva_ESS_energy_loss_charging_in_WhDay","999")/1000,1);
+my $stat51_Caterva_ESS_energy_loss_discharging_in_WhDay = round(ReadingsVal("ESS_Minutenwerte","stat51_Caterva_ESS_energy_loss_discharging_in_WhDay","999")/1000,1);
+addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhDay 05: $stat31_HH_counter_level_discharge_in_WhDay 07: $stat32_HH_counter_level_charge_in_WhDay 09: $stat33_PV_counter_level_discharge_in_WhDay 11: $stat34_ESS_counter_level_charge_in_WhDay 13: $stat35_PV_counter_level_charge_in_WhDay 15: $stat36_PVplusHH_counter_level_discharge_in_WhDay 17: $stat37_PVplusHH_counter_level_charge_in_WhDay 19: $stat38_PBH_counter_level_in_WhDay 21: $stat39_PPB_counter_level_in_WhDay 23: $stat40_PRE_counter_level_in_WhDay 25: $stat41_PDI_counter_level_in_WhDay 27: $stat42_PFCRpos_counter_level_in_WhDay 29: $stat43_PFCRneg_counter_level_in_WhDay 31: $stat45_PFRRpos_counter_level_in_WhDay 33: $stat46_PFRRneg_counter_level_in_WhDay 35: $statPV2GridDay 37: $statPV2HHDay 39: $statGrid2HHDay 41: $statGrid2HH_2Day 43: $statHHcompleteDay 45: $stat50_Caterva_ESS_energy_loss_charging_in_WhDay 47: $stat51_Caterva_ESS_energy_loss_discharging_in_WhDay");
 }
 
 sub
@@ -719,12 +720,13 @@ my $stat42_PFCRpos_counter_level_in_WhMonth = round(ReadingsVal("ESS_Minutenwert
 my $stat43_PFCRneg_counter_level_in_WhMonth = round(ReadingsVal("ESS_Minutenwerte","stat43_PFCRneg_counter_level_in_WhMonth","999")/1000,1);
 my $stat45_PFRRpos_counter_level_in_WhMonth = round(ReadingsVal("ESS_Minutenwerte","stat45_PFRRpos_counter_level_in_WhMonth","999")/1000,1);
 my $stat46_PFRRneg_counter_level_in_WhMonth = round(ReadingsVal("ESS_Minutenwerte","stat46_PFRRneg_counter_level_in_WhMonth","999")/1000,1);
-my $statPVtoHHMonth = round(ReadingsVal("ESS_Minutenwerte","statPVtoHHMonth","999")/1000,1);
 my $statPV2GridMonth = round(ReadingsVal("ESS_Minutenwerte","statPV2GridMonth","999")/1000,1);
 my $statPV2HHMonth = round(ReadingsVal("ESS_Minutenwerte","statPV2HHMonth","999")/1000,1);
 my $statGrid2HHMonth = round(ReadingsVal("ESS_Minutenwerte","statGrid2HHMonth","999")/1000,1);
 my $statHHcompleteMonth = round(ReadingsVal("ESS_Minutenwerte","statHHcompleteMonth","999")/1000,1);
-addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhMonth 05: $stat31_HH_counter_level_discharge_in_WhMonth 07: $stat32_HH_counter_level_charge_in_WhMonth 09: $stat33_PV_counter_level_discharge_in_WhMonth 11: $stat34_ESS_counter_level_charge_in_WhMonth 13: $stat35_PV_counter_level_charge_in_WhMonth 15: $stat36_PVplusHH_counter_level_discharge_in_WhMonth 17: $stat37_PVplusHH_counter_level_charge_in_WhMonth 19: $stat38_PBH_counter_level_in_WhMonth 21: $stat39_PPB_counter_level_in_WhMonth 23: $stat40_PRE_counter_level_in_WhMonth 25: $stat41_PDI_counter_level_in_WhMonth 27: $stat42_PFCRpos_counter_level_in_WhMonth 29: $stat43_PFCRneg_counter_level_in_WhMonth 31: $stat45_PFRRpos_counter_level_in_WhMonth 33: $stat46_PFRRneg_counter_level_in_WhMonth  35: $statPV2GridMonth 37: $statPV2HHMonth 39: $statGrid2HHMonth 41: $statHHcompleteMonth");
+my $stat50_Caterva_ESS_energy_loss_charging_in_WhMonth = round(ReadingsVal("ESS_Minutenwerte","stat50_Caterva_ESS_energy_loss_charging_in_WhMonth","999")/1000,1);
+my $stat51_Caterva_ESS_energy_loss_discharging_in_WhMonth = round(ReadingsVal("ESS_Minutenwerte","stat51_Caterva_ESS_energy_loss_discharging_in_WhMonth","999")/1000,1);
+addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhMonth 05: $stat31_HH_counter_level_discharge_in_WhMonth 07: $stat32_HH_counter_level_charge_in_WhMonth 09: $stat33_PV_counter_level_discharge_in_WhMonth 11: $stat34_ESS_counter_level_charge_in_WhMonth 13: $stat35_PV_counter_level_charge_in_WhMonth 15: $stat36_PVplusHH_counter_level_discharge_in_WhMonth 17: $stat37_PVplusHH_counter_level_charge_in_WhMonth 19: $stat38_PBH_counter_level_in_WhMonth 21: $stat39_PPB_counter_level_in_WhMonth 23: $stat40_PRE_counter_level_in_WhMonth 25: $stat41_PDI_counter_level_in_WhMonth 27: $stat42_PFCRpos_counter_level_in_WhMonth 29: $stat43_PFCRneg_counter_level_in_WhMonth 31: $stat45_PFRRpos_counter_level_in_WhMonth 33: $stat46_PFRRneg_counter_level_in_WhMonth  35: $statPV2GridMonth 37: $statPV2HHMonth 39: $statGrid2HHMonth 41: $statHHcompleteMonth 43: $stat50_Caterva_ESS_energy_loss_charging_in_WhMonth 45: $stat51_Caterva_ESS_energy_loss_discharging_in_WhMonth");
 }
 
 sub
@@ -756,12 +758,13 @@ my $stat42_PFCRpos_counter_level_in_WhDayLast = round(ReadingsVal("ESS_Minutenwe
 my $stat43_PFCRneg_counter_level_in_WhDayLast = round(ReadingsVal("ESS_Minutenwerte","stat43_PFCRneg_counter_level_in_WhDayLast","999")/1000,1);
 my $stat45_PFRRpos_counter_level_in_WhDayLast = round(ReadingsVal("ESS_Minutenwerte","stat45_PFRRpos_counter_level_in_WhDayLast","999")/1000,1);
 my $stat46_PFRRneg_counter_level_in_WhDayLast = round(ReadingsVal("ESS_Minutenwerte","stat46_PFRRneg_counter_level_in_WhDayLast","999")/1000,1);
-my $statPVtoHHDayLast = round(ReadingsVal("ESS_Minutenwerte","statPVtoHHDayLast","999")/1000,1);
 my $statPV2GridDayLast = round(ReadingsVal("ESS_Minutenwerte","statPV2GridDayLast","999")/1000,1);
 my $statPV2HHDayLast = round(ReadingsVal("ESS_Minutenwerte","statPV2HHDayLast","999")/1000,1);
 my $statGrid2HHDayLast = round(ReadingsVal("ESS_Minutenwerte","statGrid2HHDayLast","999")/1000,1);
 my $statHHcompleteDayLast = round(ReadingsVal("ESS_Minutenwerte","statHHcompleteDayLast","999")/1000,1);
-addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhDayLast 05: $stat31_HH_counter_level_discharge_in_WhDayLast 07: $stat32_HH_counter_level_charge_in_WhDayLast 09: $stat33_PV_counter_level_discharge_in_WhDayLast 11: $stat34_ESS_counter_level_charge_in_WhDayLast 13: $stat35_PV_counter_level_charge_in_WhDayLast 15: $stat36_PVplusHH_counter_level_discharge_in_WhDayLast 17: $stat37_PVplusHH_counter_level_charge_in_WhDayLast 19: $stat38_PBH_counter_level_in_WhDayLast 21: $stat39_PPB_counter_level_in_WhDayLast 23: $stat40_PRE_counter_level_in_WhDayLast 25: $stat41_PDI_counter_level_in_WhDayLast 27: $stat42_PFCRpos_counter_level_in_WhDayLast 29: $stat43_PFCRneg_counter_level_in_WhDayLast 31: $stat45_PFRRpos_counter_level_in_WhDayLast 33: $stat46_PFRRneg_counter_level_in_WhDayLast  35: $statPV2GridDayLast 37: $statPV2HHDayLast 39: $statGrid2HHDayLast 41: $statHHcompleteDayLast");
+my $stat50_Caterva_ESS_energy_loss_charging_in_WhDayLast = round(ReadingsVal("ESS_Minutenwerte","stat50_Caterva_ESS_energy_loss_charging_in_WhDayLast","999")/1000,1);
+my $stat51_Caterva_ESS_energy_loss_discharging_in_WhDayLast = round(ReadingsVal("ESS_Minutenwerte","stat51_Caterva_ESS_energy_loss_discharging_in_WhDayLast","999")/1000,1);
+addToLog($filename, "$timestamp4 03: $stat30_ESS_counter_level_discharge_in_WhDayLast 05: $stat31_HH_counter_level_discharge_in_WhDayLast 07: $stat32_HH_counter_level_charge_in_WhDayLast 09: $stat33_PV_counter_level_discharge_in_WhDayLast 11: $stat34_ESS_counter_level_charge_in_WhDayLast 13: $stat35_PV_counter_level_charge_in_WhDayLast 15: $stat36_PVplusHH_counter_level_discharge_in_WhDayLast 17: $stat37_PVplusHH_counter_level_charge_in_WhDayLast 19: $stat38_PBH_counter_level_in_WhDayLast 21: $stat39_PPB_counter_level_in_WhDayLast 23: $stat40_PRE_counter_level_in_WhDayLast 25: $stat41_PDI_counter_level_in_WhDayLast 27: $stat42_PFCRpos_counter_level_in_WhDayLast 29: $stat43_PFCRneg_counter_level_in_WhDayLast 31: $stat45_PFRRpos_counter_level_in_WhDayLast 33: $stat46_PFRRneg_counter_level_in_WhDayLast  35: $statPV2GridDayLast 37: $statPV2HHDayLast 39: $statGrid2HHDayLast 41: $statHHcompleteDayLast 43: $stat50_Caterva_ESS_energy_loss_charging_in_WhDayLast 45: $stat51_Caterva_ESS_energy_loss_discharging_in_WhDayLast");
 }
 
 
