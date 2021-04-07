@@ -466,6 +466,12 @@ foreach (@readings)
  fhem("setreading ESS_Minutenwerte 36_PVplusHH_counter_level_discharge_in_Wh_TD $val5");
  my $val6  = ReadingsVal("ESS_Minutenwerte", "37_PVplusHH_counter_level_charge_in_Wh",0);;1 while $val6 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
  fhem("setreading ESS_Minutenwerte 37_PVplusHH_counter_level_charge_in_Wh_TD $val6");
+ my $val7  = ReadingsVal("ESS_Minutenwerte", "PV2Grid",0);;1 while $val7 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte PV2Grid_TD $val7");
+ my $val8  = ReadingsVal("ESS_Minutenwerte", "Grid2HH",0);;1 while $val8 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte Grid2HH_TD $val8");
+ my $val9  = ReadingsVal("ESS_Minutenwerte", "HHcomplete",0);;1 while $val9 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte HHcomplete_TD $val9");
 }
 
 
