@@ -14,7 +14,7 @@ set yrange [0:]
 set y2range [0:9000]
 
 #ESS_Logfile 17:3\x3a.*::
-#Zaehler_Tageswerte 7:03\x3a.*::
+#Zaehler_Tageswerte 43:03\x3a.*::
 
 plot "<IN>" using 1:2 axes x1y2 title 'HH-Verbrauch' ls l0fill lw 1 with fsteps,\
      "<IN>" using 1:2 axes x1y1 title 'HH-Energie' ls l5dot lw 2 with fsteps
