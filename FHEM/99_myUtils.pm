@@ -472,6 +472,10 @@ foreach (@readings)
  fhem("setreading ESS_Minutenwerte Grid2HH_TD $val8");
  my $val9  = ReadingsVal("ESS_Minutenwerte", "HHcomplete",0);;1 while $val9 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
  fhem("setreading ESS_Minutenwerte HHcomplete_TD $val9");
+ my $val10  = ReadingsVal("ESS_Minutenwerte", "50_Caterva_ESS_energy_loss_charging_in_Wh",0);;1 while $val10 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte 50_Caterva_ESS_energy_loss_charging_in_Wh_TD $val10");
+ my $val11  = ReadingsVal("ESS_Minutenwerte", "51_Caterva_ESS_energy_loss_discharging_in_Wh",0);;1 while $val11 =~ s/^(-?\d+)(\d{3})/$1.$2/;;
+ fhem("setreading ESS_Minutenwerte 51_Caterva_ESS_energy_loss_discharging_in_Wh_TD $val11");
 }
 
 
