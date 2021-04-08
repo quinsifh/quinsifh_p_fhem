@@ -1084,20 +1084,6 @@ if ($response == "0"){
 
 
 sub
-read_KMTronic_Switch_1()
-{
-my $Status_Switch_1 = substr(`curl --user admin:admin "http://192.168.0.199/status.xml" 2>/dev/null | grep relay1`,8,1);
-if (length($Version) > 0){
-fhem("setreading KMtronic_Relay_switch_1 Status $Status_Switch_1");
-Log 1,"Mtronic_Relay_switch_1 Status $Status_Switch_1 0: EIN | 1: AUS";
-}
-else {
-Log 1,"Business Optimum nicht installiert";
-}
-}
-
-
-sub
 addToLog($$)
 {
 	my ($filename, $data) = @_;
