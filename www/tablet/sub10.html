@@ -33,7 +33,7 @@
 						data-device='["ESS_Minutenwerte"]' 
 						data-logdevice='["Zaehler_Tageswerte","ESS_Logfile"]'
 						data-logfile='["CURRENT","CURRENT"]'
-						data-columnspec='["7:.*","17:.*"]'
+						data-columnspec='["43:.*","17:.*"]'
 						data-crosshair="on"
 						data-maxvalue_sec="ESS_Minutenwerte:Axis_max"
 						data-uaxis='["secondary","primary"]'
@@ -64,39 +64,18 @@
 		<tr> 
 			<th class="big darker">Tag</div>
 		</th>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="stat32_HH_counter_level_charge_in_WhDay" data-unit=" kWh" data-factor=0.001 data-fix=1 ></div>	</td>
+			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="statHHcompleteDay" data-unit=" kWh" data-factor=0.001 data-fix=1 ></div>	</td>
 			<td></td>
 		</tr> 
 		<tr> 
 		<tr> 
 			<th><div height "75" class="big darker">Monat</div></th>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="stat32_HH_counter_level_charge_in_WhMonth" data-unit=" kWh" data-factor=0.001 data-fix=1 ></div></td>
+			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="statHHcompleteMonth" data-unit=" kWh" data-factor=0.001 data-fix=1 ></div></td>
 			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="Tagesverbrauch_month" data-fix ="1" data-unit=" kWh/Tag" data-factor=0.001 data-fix=1  ></div></td>
 		</tr> 
 		</tr> 
 		
-<!--
-		
-		<tr> 
-		<tr> 
-			<th><div height "75" class="big darker">Jahr</div></th>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="stat32_HH_counter_level_charge_in_WhYear" data-unit=" Wh"   ></div></td>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="XX" data-fix ="0" data-unit=" kWh/Tag"   ></div></td>
-		</tr> 
-		</tr> 
-	</tbody> 
-	<tfoot> 
-		<tr> 
-		<tr> 
-			<th><div height "75" class="big darker">Total</div></th>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="Gesamtverbrauch_total" data-unit=" kWh" data-fix ="0"  ></div></td>
-			<td><div data-type="label" class="large right-align" data-device="ESS_Minutenwerte" data-get="Tagesverbrauch_total" data-fix ="0" data-unit=" kWh/Tag"   ></div></td>
-		</tr> 
-		</tr> 
-	</tfoot>
-	
--->
-	
+
 
 	
 </table>
