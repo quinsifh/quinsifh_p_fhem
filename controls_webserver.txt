@@ -1,5 +1,5 @@
 UPD 2021-02-27_16:36:29 1907    FHEM/00_BusinessOptimum_Parameter.cfg
-UPD 2021-04-10_12:57:05 61008   FHEM/00_Caterva_ESS.cfg
+UPD 2021-04-10_13:03:08 61410   FHEM/00_Caterva_ESS.cfg
 UPD 2021-02-27_16:36:29 462     FHEM/00_Private.cfg
 UPD 2021-02-27_16:36:29 4914    FHEM/00_SYSMON.cfg
 UPD 2021-04-08_12:48:49 57177   FHEM/99_myUtils.pm
@@ -44,7 +44,7 @@ UPD 2021-02-27_16:36:29 4133    www/images/caterva/sonne_off.png
 UPD 2021-02-27_16:36:29 7608    www/images/caterva/verbrauch.png
 UPD 2021-02-27_16:36:29 1630    www/tablet/index.html
 UPD 2021-02-27_16:36:29 1190    www/tablet/menu.html
-UPD 2021-04-10_12:57:05 9175    www/tablet/sub10.html
+UPD 2021-04-10_13:09:54 9131    www/tablet/sub10.html
 UPD 2021-02-27_16:36:29 13771   www/tablet/sub11.html
 UPD 2021-04-07_20:51:45 5212    www/tablet/sub12.html
 UPD 2021-04-10_11:12:35 6278    www/tablet/sub1.html
