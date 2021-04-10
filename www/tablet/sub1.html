@@ -53,48 +53,6 @@
 
 
 
-
-<li data-row="6" data-col="10"  data-sizex="8" data-sizey="5"> 
-	<header>	
- 		<div data-type="button" class="darker small inline left-align " data-icon="far fa-bolt"></div>
-		<div data-type="label" class=" inline cell big center-align"><medium>Netzbezug / Netzeinspeisung</medium></div>
-	</header>
-	
-	<table> 
-		<thead>
-			<tr> 
-				<th colspan="4">
-					<div	data-type="chart"
-							data-title="Netzbezug: $eval(parseInt($data{currval1}*10)/10) W / Netzeinspeisung: $eval(parseInt($data{currval2}*10)/10) W"
-							data-device='["ESS_Minutenwerte","ESS_Minutenwerte"]' 
-							data-logdevice='["ESS_Logfile","ESS_Logfile"]'
-							data-logfile='["CURRENT","CURRENT"]'
-							data-columnspec='["5:.*","13:.*"]'
-							data-uaxis='["primary","primary"]'
-							data-yunit=" W"
-							data-legend='["Netzbezug","Netzeinspeisung"]'
-							data-yunit_sec=" W"
-							data-style='["ftui l2fill","ftui l3fill"]'
-							data-minvalue="0" 
-							data-maxvalue="ESS_Minutenwerte:09_PVpeak_in_W_2"
-							data-showlegend ="false"
-							data-width="570" data-height="310" 
-							data-nofulldays="true"
-							data-daysago_start="24h"
-							data-daysago_end="now"
-							data-crosshair="on"
-							
-					></div>
-				</th> 
-			</tr>  
-		</thead> 
-	</table>
-</li>
-
-
-
-
-
 <li data-row="1" data-col="10" data-sizex="8" data-sizey="5"> 
 
 	<header>	
@@ -112,13 +70,13 @@
 							data-device='["ESS_Minutenwerte","ESS_Minutenwerte","ESS_Minutenwerte","ESS_Minutenwerte"]' 
 							data-logdevice='["ESS_Logfile","ESS_Logfile","ESS_Logfile","ESS_Logfile"]'
 							data-logfile='["CURRENT","CURRENT","CURRENT","CURRENT"]'
-							data-columnspec='["3:.*","11:.*","23:.*","27:.*"]'
+							data-columnspec='["3:.*","11:.*","23:.*","57:.*"]'
 							data-uaxis='["secondary","primary","primary","primary"]'
 							data-ptype='["lines","histeps","histeps","histeps"]'
 							data-style='["ftui l6","ftui l3fill","ftui l4fill","ftui l2fill"]'
 							data-yunit=" W"
 							data-yunit_sec=" %"
-							data-legend='["Ladezustand","Einspeicherung","Ausspeicherung","Zwangsnachladung"]'
+							data-legend='["Ladezustand","Einspeicherung","Ausspeicherung","Nachladung"]'
 							data-crosshair="on"
 							data-minvalue="0" 
 							data-minvalue_sec = "0"
@@ -160,7 +118,7 @@
 			<tr> 
 				<th colspan="4">
 					<div	data-type="chart"
-							data-title="Leistung:  Durchschnitt: $eval(parseInt($data{avg5}*10)/10) W / Max: $eval(parseInt($data{max5}*100)/100) W / Zuletzt: $eval(parseInt($data{currval5}*100)/100) W       Energieaufnahme: $eval(parseInt($data{currval1}*100)/100) kWh"
+							data-title="Leistung:  Durchschnitt: $eval(parseInt($data{avg5}*10)/10) W / Max: $eval(parseInt($data{max5}*100)/100) W / Zuletzt: $eval(parseInt($data{currval5}*100)/100) W       HH gesamt: $eval(parseInt($data{currval1}*100)/100) kWh"
 							data-device='["Zaehler_Tageswerte","ESS_Minutenwerte","ESS_Minutenwerte","ESS_Minutenwerte","ESS_Minutenwerte"]'
 							data-logdevice='["Zaehler_Tageswerte","ESS_Logfile","ESS_Logfile","ESS_Logfile","ESS_Logfile"]'
 							data-logfile='["CURRENT","CURRENT","CURRENT","CURRENT","CURRENT"]'
@@ -168,7 +126,7 @@
 							data-yunit=" W"
 							data-maxvalue="ESS_Minutenwerte:09_PVpeak_in_W_2"
 							data-yunit_sec=" kWh"
-							data-columnspec='["7:.*","9:.*","7:.*","5:.*","17:.*"]'
+							data-columnspec='["43:.*","9:.*","7:.*","5:.*","17:.*"]'
 							data-style='["ftui l2","ftui l3fill","ftui l4fill","ftui l2fill","ftui l0fill"]'
 							data-legend='["heute kWh","über PV","über Batterie","über Netz","total"]'
 							data-ptype='["lines","lines","lines:1","lines:2","lines"]'
@@ -187,6 +145,46 @@
 	</table>
 </li>
 
+
+
+
+
+<li data-row="6" data-col="10"  data-sizex="8" data-sizey="5"> 
+	<header>	
+ 		<div data-type="button" class="darker small inline left-align " data-icon="far fa-bolt"></div>
+		<div data-type="label" class=" inline cell big center-align"><medium>Netzbezug / Netzeinspeisung</medium></div>
+	</header>
+	
+	<table> 
+		<thead>
+			<tr> 
+				<th colspan="4">
+					<div	data-type="chart"
+							data-title="Netzbezug: $eval(parseInt($data{currval1}*10)/10) W / Netzeinspeisung: $eval(parseInt($data{currval2}*10)/10) W"
+							data-device='["ESS_Minutenwerte","ESS_Minutenwerte"]' 
+							data-logdevice='["ESS_Logfile","ESS_Logfile"]'
+							data-logfile='["CURRENT","CURRENT"]'
+							data-columnspec='["5:.*","13:.*"]'
+							data-uaxis='["primary","primary"]'
+							data-yunit=" W"
+							data-legend='["Netzbezug","Netzeinspeisung"]'
+							data-yunit_sec=" W"
+							data-style='["ftui l2fill","ftui l3fill"]'
+							data-minvalue="0" 
+							data-maxvalue="ESS_Minutenwerte:09_PVpeak_in_W_2"
+							data-showlegend ="false"
+							data-width="570" data-height="310" 
+							data-nofulldays="true"
+							data-daysago_start="24h"
+							data-daysago_end="now"
+							data-crosshair="on"
+							
+					></div>
+				</th> 
+			</tr>  
+		</thead> 
+	</table>
+</li>
 
 
 
